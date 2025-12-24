@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(10, 31, 68, 0.12);
+  padding: 32px 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #0a1f44;
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+input {
+  width: 365px;
+  height: 30px;
+  padding: 10px 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccd4e0;
+  font-size: 14px;
+  background: #eef4ff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: #7a879a;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 2px rgba(31, 60, 136, 0.15);
+  background: #ffffff;
+}
+
+button {
+  width: 100%;
+  height: 44px;
+  margin-top: 6px;
+  background: #0a1f44;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #1f3c88;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #333;
+}
+
+.switch a {
+  color: #1f3c88;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mobile-field .prefix {
+  height: 37px;
+  padding: 10px 10px;
+  background: #0a1f44;
+  border: 1px solid #ccd4e0;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-weight: 600;
+  color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.mobile-field input {
+  height: 37px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 0;
+  background: #eef4ff;
+}
+
+.message-box {
+  margin-top: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a1f44;
+  background: #e6ebf5;
+  min-width: 380px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(10, 31, 68, 0.1);
+}

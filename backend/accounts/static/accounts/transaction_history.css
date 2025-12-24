@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.history-wrapper {
+  width: 90%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  color: #0a1f44;
+  margin-bottom: 25px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  background: #0a1f44;
+  color: #ffffff;
+}
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+tr:nth-child(even) {
+  background: #f2f5fb;
+}
+.sent {
+  color: #c0392b;
+  font-weight: 600;
+}
+.received {
+  color: #1e7e34;
+  font-weight: 600;
+}
+.success {
+  color: #1e7e34;
+  font-weight: 600;
+}
+.failed {
+  color: #c0392b;
+  font-weight: 600;
+}
+.empty {
+  text-align: center;
+  margin: 20px 0;
+  color: #666;
+}
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #1f3c88;
+  font-weight: 500;
+}

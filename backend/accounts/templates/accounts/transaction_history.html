@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transaction History</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'accounts/transaction_history.css' %}"
+    />
+  </head>
+  <body>
+    <div class="history-wrapper">
+      <h2>Transaction History</h2>
+      {% if transactions %}
+      <table>
+        <thead>
+          <tr>
+            <th>Date & Time</th>
+            <th>Type</th>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tx in transactions %}
+          <tr>
+            <td>{{ tx.created_at|date:"d M Y, H:i:s" }}</td>
+            {% if tx.sender == current_user %}
+            <td class="sent">Debit</td>
+            <td>{{ tx.receiver.username }} (ID: {{ tx.receiver.id }})</td>
+            {% else %}
+            <td class="received">Credit</td>
+            <td>{{ tx.sender.username }} (ID: {{ tx.sender.id }})</td>
+            {% endif %}
+            <td>₹ {{ tx.amount }}</td>
+            <td class="{{ tx.status|lower }}">{{ tx.status }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p class="empty">No transactions found.</p>
+      {% endif %} <a href="/dashboard/" class="back">← Back to Dashboard</a>
+    </div>
+  </body>
+</html>

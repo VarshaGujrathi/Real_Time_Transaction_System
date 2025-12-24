@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.dashboard-wrapper {
+  width: 420px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.welcome {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0a1f44;
+}
+.welcome span {
+  color: #1f3c88;
+}
+.balance-card {
+  background: #0a1f44;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.balance-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+.balance-card h2 {
+  margin-top: 10px;
+  font-size: 34px;
+  font-weight: 700;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.btn {
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.btn.primary {
+  background: #1f3c88;
+  color: #ffffff;
+}
+.btn.primary:hover {
+  background: #0a1f44;
+}
+.btn.secondary {
+  background: #e6ebf5;
+  color: #0a1f44;
+}
+.btn.secondary:hover {
+  background: #d6deef;
+}
+.btn.logout {
+  background: #c0392b;
+  color: #ffffff;
+}
+.btn.logout:hover {
+  background: #a93226;
+}

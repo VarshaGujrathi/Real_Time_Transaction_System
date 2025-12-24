@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pay via Mobile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/pay_mobile.css' %}" />
+  </head>
+  <body>
+    <div class="pay-wrapper">
+      <h2>Pay via Mobile Number</h2>
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="mobile_number"
+          placeholder="Mobile Number"
+          pattern="[0-9]{10}"
+          required
+        />
+        <input type="number" name="amount" placeholder="Amount" required />
+        <button type="submit">Send Money</button> {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+      </form>
+      <a href="/dashboard/" class="back">← Back to Dashboard</a>
+    </div>
+  </body>
+</html>

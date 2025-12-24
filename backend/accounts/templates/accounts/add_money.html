@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Money</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/add_money.css' %}" />
+  </head>
+  <body>
+    <div class="add-wrapper">
+      <h2>Add Money to Wallet</h2>
+      {% if error %}
+      <p style="color: red">{{ error }}</p>
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <input
+          type="number"
+          name="amount"
+          placeholder="Enter amount"
+          required
+        />
+        <button type="submit">Add Money</button>
+      </form>
+      <a href="/dashboard/">← Back to Dashboard</a>
+    </div>
+  </body>
+</html>
