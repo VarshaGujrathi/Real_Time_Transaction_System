@@ -67,7 +67,7 @@ The system focuses on transactional integrity, security, and traceability, ensur
 - Transactions are never modified or deleted
 
 ## Step-by-Step Setup
-```bash
+
 # Clone the repository
 git clone https://github.com/VarshaGujrathi/Real_Time_Transaction_System.git
 cd Transaction_system
@@ -75,7 +75,6 @@ cd Transaction_system
 # Create and activate virtual environment
 python -m venv venv
 venv\Scripts\activate          # Windows
-# source venv/bin/activate     # macOS/Linux
 
 # Install dependencies
 pip install django
